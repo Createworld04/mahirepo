@@ -64,16 +64,13 @@ keyboard = InlineKeyboardMarkup(
 )
 
 
-@bot.on_message(
-    filters.command(["pyro"]) & ~filters.edited & (filters.chat(sudo_groups)))
+@bot.on_message(filters.command(["pyro"]) & ~filters.edited & (filters.chat(sudo_groups)))
 async def account_login(bot: Client, m: Message):
 
  editable = await m.reply_text("**Hi Press**\n**Text** = /pro_txt\n**Top** = /pro_top\n**Vision** = /pro_vision\n**Jw** = /pro_jw\n**Olive** = /pro_olive\n**Addapdf** = /adda_pdf",reply_markup=keyboard)
 
 
-@bot.on_message(
-    filters.command(["cancel"]) & ~filters.edited & (filters.chat(sudo_groups))
-)
+@bot.on_message(filters.command(["cancel"]) & ~filters.edited & (filters.chat(sudo_groups)))
 async def cancel(_, m):
     editable = await m.reply_text("Canceling All process Plz wait\n🚦🚦 Last Process Stopped 🚦🚦")
     global cancel
@@ -82,15 +79,13 @@ async def cancel(_, m):
     return
 
 
-@bot.on_message(
-    filters.command("restart") & ~filters.edited & (filters.chat(sudo_groups)))
+@bot.on_message(filters.command("restart") & ~filters.edited & (filters.chat(sudo_groups)))
 async def restart_handler(_, m):
     await m.reply_text("Restarted!", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(
-    filters.command(["pro_txt"]) & ~filters.edited & (filters.chat(sudo_groups)))
+@bot.on_message(filters.command(["pro_txt"]) & ~filters.edited & (filters.chat(sudo_groups)))
 async def account_login(bot: Client, m: Message):
     user = m.from_user.id if m.from_user is not None else None
     if user is not None and user not in sudo_users:
@@ -416,8 +411,7 @@ async def account_login(bot: Client, m: Message):
     await m.reply_text("Done")
 
 
-@bot.on_message(
-    filters.command(["pro_top"]) & ~filters.edited & (filters.chat(sudo_groups)))
+@bot.on_message(filters.command(["pro_top"]) & ~filters.edited & (filters.chat(sudo_groups)))
 async def account_login(bot: Client, m: Message):
     user = m.from_user.id if m.from_user is not None else None
     if user is not None and user not in sudo_users:
@@ -501,8 +495,7 @@ async def account_login(bot: Client, m: Message):
         await m.reply_text(str(e))
     await m.reply_text("Done")
 
-@bot.on_message(
-    filters.command(["pro_vision"]) & ~filters.edited & (filters.chat(sudo_groups)))
+@bot.on_message(filters.command(["pro_vision"]) & ~filters.edited & (filters.chat(sudo_groups)))
 async def account_login(bot: Client, m: Message):
     user = m.from_user.id if m.from_user is not None else None
     if user is not None and user not in sudo_users:
@@ -587,8 +580,7 @@ async def account_login(bot: Client, m: Message):
         await m.reply_text(str(e))
     await m.reply_text("Done")
 
-@bot.on_message(
-    filters.command(["adda_pdf"]) & ~filters.edited & (filters.chat(sudo_groups)))
+@bot.on_message(filters.command(["adda_pdf"]) & ~filters.edited & (filters.chat(sudo_groups)))
 async def account_login(bot: Client, m: Message):
     user = m.from_user.id if m.from_user is not None else None
     if user is not None and user not in sudo_users:
@@ -670,8 +662,7 @@ async def account_login(bot: Client, m: Message):
 
 
 
-@bot.on_message(
-    filters.command(["pro_olive"]) & ~filters.edited & (filters.chat(sudo_groups)))
+@bot.on_message(filters.command(["pro_olive"]) & ~filters.edited & (filters.chat(sudo_groups)))
 async def account_login(bot: Client, m: Message):
     user = m.from_user.id if m.from_user is not None else None
     if user is not None and user not in sudo_users:
@@ -757,8 +748,7 @@ async def account_login(bot: Client, m: Message):
     await m.reply_text("Done")
 
 
-@bot.on_message(
-    filters.command(["pro_jw"]) & ~filters.edited & (filters.chat(sudo_groups)))
+@bot.on_message(filters.command(["pro_jw"]) & ~filters.edited & (filters.chat(sudo_groups)))
 async def account_login(bot: Client, m: Message):
     user = m.from_user.id if m.from_user is not None else None
     if user is not None and user not in sudo_users:
@@ -939,8 +929,7 @@ async def account_login(bot: Client, m: Message):
     await m.reply_text("Done")
 
 
-@bot.on_message(
-    filters.command(["top"]) & ~filters.edited & (filters.chat(sudo_groups)))
+@bot.on_message(filters.command(["top"]) & ~filters.edited & (filters.chat(sudo_groups)))
 async def account_login(bot: Client, m: Message):
     user = m.from_user.id if m.from_user is not None else None
     if user is not None and user not in sudo_users:
