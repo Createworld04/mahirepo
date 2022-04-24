@@ -63,7 +63,7 @@ keyboard = InlineKeyboardMarkup(
 )
 
 
-@bot.on_message(filters.command(["pyro"])& ~filters.edited)
+@bot.on_message(filters.command(["pyro"]) & ~pyrogram.filters.edited)
 async def account_login(bot: Client, m: Message):
 
  editable = await m.reply_text("**Hi Press**\n**Text** = /pro_txt\n**Top** = /pro_top\n**Vision** = /pro_vision\n**Jw** = /pro_jw\n**Olive** = /pro_olive\n**Addapdf** = /adda_pdf")
