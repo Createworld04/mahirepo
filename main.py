@@ -26,6 +26,7 @@ from pyrogram.types import User, Message
 #import sys
 import re
 import os
+import io
 #import pycurl
 
 # bot = Client(
