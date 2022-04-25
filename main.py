@@ -11,7 +11,7 @@ from pyrogram.types import Message
 import pyrogram
 import tgcrypto
 from p_bar import progress_bar
-from details import api_id, api_hash, bot_token
+#from details import api_id, api_hash, bot_token
 from subprocess import getstatusoutput
 import helper
 import logging
